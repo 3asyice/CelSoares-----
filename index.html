@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="eng">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,8 @@ body {
   align-items: center;
   height:auto;
   margin:0;
+  min-width:320px;
+  max-width:1440px;
 }
   h2 {
     color:#FF0000;
@@ -22,6 +24,7 @@ body {
     margin-right: 25px;
   }
   p {
+    text-align: justify;
     margin-right:20px;margin-left:20px;
     color:#5A4D42;
    font-family: times;
@@ -61,12 +64,65 @@ body {
    text-decoration: none;
   text-align: center;
   }
+  .container {
+   height:100vh;
+   display:grid;
+   grid-template-rows: 100px 100px 100px;
+  }
+.element {
+  background-color:#FF6000;
+  color:#E5FF00;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.yellow {
+  color:#F6FF00;
+  text-align: center;
+}
+.btn-red {
+  background-color: #FF0000;
+  border:none;
+  color:#E3FF00;
+}
+.container-1 {
+  display:none;
+  top:0;right:0;left:0;bottom:0;
+    background: #D60000 url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbmnuaTiHhcPgYdcgLu9tdmUYQG3cyD9wCJQ&usqp=CAU') center;
+  overflow:auto;height:auto;
+  position:fixed;
+}
 </style>
 <body>
  
-  <p style="font-size: 12px">Notícias de maio 08/05/24</p>
+  <p style="font-size: 12px">News of may</p>
+  <div class="container">
+    <div class="element">
+      <p class="yellow">BIG BOY KILLED HIMSELF</p>
+        <button class="btn-red" onclick="containerOne()">see MirrorNews of june</button>
+    </div>
+    
+    
+  </div>
+ 
+<br><br>
   
-  
+  <div class="container-1" id="container-1">
+    <p>June's news</p>
+    <button style="margin-left:30px;" class="btn-red" onclick="containerOne()">back</button>
+   <details>
+     <summary>
+       <h2>AUGUSTO BERGMANN DA CUNHA BIOGRAPHY</h2>
+     </summary>
+    
+     <p> <a href="https://www.facebook.com/augusto.cunha.984">Augusto Bergmann da Cunha</a> son of Marciane Bergmann.  <img class="img-center" src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/AidesBergmann.jpg" alt="Bergmann" width='250'> He was born in Venancio Aires and his nickname is Guto. Also, he is in a relationship with Stefani Dhein. He has a picture of him into a wall where he looks like a man with aids. Augusto doesn't have emotions or even compassion that's why he don't deserve his title neither does the captain Damien. It's Bergmann's fault Teixeira is dead now. He's been putting so much anger at those soldiers that they're wishing to finish their lives once for all. </p>
+   </details>
+   <details>
+     <summary>
+       <h2>GOOD NEWS FOR PEOPLE WHO LOVES BAD NEWS</h2>
+     </summary>
+     <p>Looks like soldier Carvalho is actually really messed up. He might be expeled from military but no one knows it. Bergmann is really mad at him. Everyone is trying to make things worse for him. No one really likes Carvalho. He is a drunk and an embaressed guy. He doesn't deserve to be in military. Things are about to get worse than imagined, now, he has to pay the car's damage the same car that ran him over when he was drunk. What if he just said he tried to kill himself? No one gives a fuck. The unlucky number is 609 because it will still the same upside down it doesn't change it's a curse. What if he killed himself that day? Would people understand what he was feeling, or would they just keep it on with their lives just like they did when Teixeira did it?</p>
+   </details>
+  </div>
   <div class="carrossel">
     <div class="wrap">
     <a href="https://ww16.0123movie.net/movie/black-mirror-bandersnatch-27385.html">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpK-V-10Bn9wwnc0bEjW7sHP5ROvnNKoso8s1VaH4C_yxKSR5mX2R9jEE&s=10" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpK-V-10Bn9wwnc0bEjW7sHP5ROvnNKoso8s1VaH4C_yxKSR5mX2R9jEE&s=10"><br>BANDERSNATCH MOVIE</a>
@@ -88,27 +144,46 @@ body {
   </div>
   <details>
     <summary style="border:1px solid darkred">
-<h2 style="text-align:justify;">JOVEM MILITAR COMETE SUICÍDIO EM PONTE SECA LOCALIZADA EM SÃO PEDRO DO SUL</h2>
+<h2 style="text-align:justify;">
+   MILITARY MAN WHO JUMPED OUT OF A BRIDGE DIED IN HOSPITAL</h2>
     </summary>
   
-<p style="text-align: justify;">Ontem quarta-feira, 8, por volta da meia noite, um jovem de 18 anos cometeu suicídio em ponte seca em São Pedro do Sul. O rapaz foi identificado como Carlos Henrique Teixeira da Silva. Ele era conhecido apenas como Teixeira pelos seus colegas do Exército da Base Administrativa da Guarnição de Santa Maria. 
+<p style="text-align: justify;">
+  <em>may 8th, 2024</em> <br><br />
+  On wednesday 8th, at midnight a man of 18 years old commited suicide jumping from a bridge in São Pedro do Sul, RS. The man was identified as <a href="https://www.facebook.com/carloshenrique.teixeiradasilva.31">Carlos Henrique Teixeira da Silva</a>. He was known just as Teixeira by his military's fellows of The Base Administrative of Guarnition of Santa Maria.
 <img class="img-center" src="https://raw.githubusercontent.com/3asyice/CURSED_CHRISTMAS/main/Teixeira.jpg" width="250">
-O seu motivo por tomar esta decisão que terminou sua jor&shy;nada ainda conti&shy;nua desconhecido, mas especulações sugerem que ele teria pro&shy;blemas pessoais com a família. Não se descar&shy;ta a hipó&shy;tese de que o QUARTEL foi mais um ambiente onde provavel&shy;mente ele passou por muita pressão psicológica.
+The reason why he decided to end his life is still unknown, but there's speculations that sugests that he had family problems. Not to mention if he had some pressure into the military that made him do it. Probably because the military could have given a psycological damage at him. <br>
+<em>"A man who agonized in hospital until his last breath. RIP &#10013;"</em>
 <br>
 <br>
 <br>
 <details><summary>
-  <h2>Teoria</h2>
+  <h2>TEORY</h2>
 </summary>
-<p>A teoria que poderia ser verdade, porém pouco provável, de que, o Teixeira não estaria morto, mas escondido em algum lugar. O exército alegara a morte de um recruta para fazer outros recrutas e a família dele pensar que ele estaria realmente morto. O governo e o exército seriam capazes de fazer um corpo exatamente igual ao do Teixeira? E um funeral? Isso é muito provável, fazer um clone e, alegar a morte de alguém. Em algum lugar o governo e o exército estão mantendo a sua localização em total sigilo.</p>
+
+<p>The teory that could be the truth but less problably is that Carlos is not dead, but he is hidden in somewhere alive needing help. The state and the military could say that a soldier is dead to make the other soldiers and his family think that he is really dead. Would the government and the military be capable of making a body exacly like Teixeira's? Also a funeral? That can be suspicious, they made a clone and didn't say anything in the news. You can search for it. There's nothing about his death but this. The military wants to get rid of the news. Why? Tell me why? Someone's death isn't important to the fucking military. That's the truth. They can hide everything about what really happened but somehow the truth is that they do not respect their soldiers enough.
+  
+</p>
 </details></details>
 </p>
 <details>
-  <summary>  <h2>JOVEM DE 19 ANOS É ATROPELADO POR CARRO ENQUANTO ESTAVA EMBRIAGADO NA RUA </h2>
+  <summary>  <h2>
+    A 19 YEARS OLD MAN IS HIT BY VEHICLE WHILE DRUNK IN THE ROAD
+     </h2>
   </summary>
-<p>
- Na noite de domingo, 26, um jovem foi atropelado por um carro em frente ao Hotel de Trânsito de Santa Maria. Três passageiros e o motorista estavam dentro do carro e pararam para prestar socorro. O rapaz estava embriagado e atravessou a rua sem olhar para os dois lados da rua. O dono do veículo preto ligou para o Samu e, o rapaz negou o atendimento, portanto, o jovem lutou contra os enfermeiros do samu e tiveram de colocá-lo a força na maca. O que foi inesperado o jovem escapar do hospital, pois alegou não precisar de atendimento médico pois estava bem. Um vídeo do acidente estava circulando entre os soldados antigos da Base Administrativa da Guarnição de Santa Maria. Este mesmo vídeo em que o coronel Soares quer esconder da emprensa. É sempre assim, o Quartel se preocupa muito mais com a imagem do Quartel do que com a integridade física e mental de seus militares. O coronel Soares não estava realmente preocupado com a minha pessoa, ele estava muito mais preocupado pela imagem do Quartel, assim o capitão Damian também estava. Foi assim que o tal "tribunal de julgamento" resolveram me dar um FATD (é um tal de Formulário de Apuração de Transgressão Disciplinar). Por mais que eu quisesse o vídeo em minhas mãos, como prova do ocorrido, os soldados antigos estão com um medo irracional de mostrar, porque isso pode levar a punições. Bem, levei uma punição, quase uma cadeia. O que poderia ser pior? Expulso dessa merda?
+<p> <em>may 26th, 2024</em> <br><br>
+ On sunday night, 26th, a man identified as <a href="https://www.facebook.com/gui.abreu.313">Guilherme de Abreu Carvalho</a> was hit by vehicle while he was drunk in the middle of the road in front of the Hotel of Transito in Santa Maria. Three passengers and the driver they stopped the vehicle to rescue the young man. The man was really drunk and he didn't want help. The driver called for help. The ambulance arrived and they drove him to the hospital but the young man fighted against the nurses and, then he escaped from hospital where he decided to go back to Military. But what he didn't know is that he would be punished for arriving drunk in there. The coronel Soares does not worry about his soldiers physical or mental health but he mostly worries about the Military's image out there in the news. A video of the accident was getting views but now the coronel wants the video deleted into everyone's cellphone. What a way good or bad way of hidding the truth.
 </p>
 </details>
+ <script>
+   var div1 = document.getElementById('container-1');
+   var divv1 = false;
+
+   function containerOne() {
+     divv1 = !divv1;
+     div1.style.display = divv1 ?
+       'block' : 'none';
+   }
+ </script>
 </body>
 </html>
