@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MirrorNEWS</title>
 </head>
@@ -16,6 +17,12 @@
     margin: 0;
     min-width: 320px;
     max-width: 1440px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   
+    
+    
   }
   
   :root {
@@ -27,7 +34,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: #00081A center;
+    background:  var(--bg-color);
     overflow: auto;
     height: auto;
     position: fixed;
@@ -65,7 +72,10 @@
     display: grid;
     grid-template-rows: 30px 100px 25px;
   }
-p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
+p {color:#FFFFFF;  font-weight: 500;
+font-size: 2em;
+margin-top: 20px;   font-family: 'Libre Baskerville', 'Georgia', serif;
+text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
 
   .element {
     background: #7F7F7F;
@@ -83,7 +93,7 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
     justify-items: center;
   }
   .element-1 {
-    background: #000000;
+    background: var(--bg-color);
     color: #E5FF00;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -113,16 +123,28 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
   input, label {
     color:white;
   }
+  .article p::first-letter {
+            font-size: 3em; /* Aumenta o tamanho da primeira letra */
+            float: left; /* Faz com que a letra fique ao lado do texto */
+            margin-right: 0.1em; /* Espaço entre a letra e o resto do texto */
+            line-height: 1; /* Ajusta o alinhamento vertical */
+            font-weight: bold; /* Faz a letra ficar em negrito */
+        }
   .osTemas {
     display: none;
-    top: 0;
-    right:50%;
-    left: 0;
-    bottom: 0;
+    top: 50px;
+    right:0;
+    left: 50%;
+    bottom: 490px;
     background: var(--bg-color);
     overflow: auto;
     height: auto; 
     position: fixed;
+    border:2px solid navajowhite;
+  }
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
   }
 </style>
 
@@ -130,8 +152,8 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
   <button style="float:right;" class="btn--1" onclick="themes()">Temas</button>
 <br><br><div class="osTemas" id="osTemas">
     <form id="colorForm">
-        <button style="float:center;" class="btn--1" onclick="themes()">X</button>
-        <br><br>
+       
+        
         <label>
             <input type="checkbox" name="color" value="#240000"> Vermelho
         </label>
@@ -170,9 +192,16 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
        <button class="btn--1" onclick="buttonOne()">NOTÍCIAS DE MAIO</button> <br> <br>
        <button class="btn--1" onclick="buttonTwo()">NOTÍCIAS DE JUNHO</button>
     </div>
-   
-    <p>Bem, o exército é um grande pesadelo, nada de mão amiga, ora, pois é o que dizem, então, posso dizer muito o contrário, porque o Exército Brasileiro também é conhecido como <em>"mãos inimigas"</em>, descobri isso quando passei uma experiência ruim no Exército. E vai por mim, o Exército é tudo uma grande mentira, não é mesmo senhor sargento Saueressig?. Quando você tem 12 anos costuma pensar que o exército faz milhares de coisas divertidas, bem, é muito o contrário disso. Nós não saltamos de avião e, nós não dirigimos carros de combate (os famosos blindados usados literalmente como enfeites).</p>
+ <div class="article">
+    <p>Por favor, deixe-me apresentar-me, sou os Olhos e Ouvidos que todos deixam passar despercebido, é um prazer conhecê-los. Essa é a natureza de meu jogo.
+      Bem, o exército é um grande pesadelo, nada de mão amiga, ora, pois é o que dizem, então, posso dizer muito do contrário, porque o Exército Brasileiro é bem mais conhecido como <em>"mãos inimigas"</em>, descobri isso com experiência própria, pois passei uma experiência ruim no Exército. E vai por mim, o Exército é tudo uma grande farsa, não é mesmo senhor sargento Saueressig? Obrigado ao senhor pela graciosa sindicância a tanto merecida. Quando você tem 12 anos costuma pensar que o exército faz milhares de coisas divertidas, bem, é muito o contrário disso. Nós não saltamos de avião e, nós não dirigimos carros de combate (os famosos blindados usados literalmente como enfeites).</p>
     <p>Com todo o respeito: <em>"Foda-se o sigilo do Exército Brasileiro!"</em><br><br>O Exército pode te ferrar de várias maneiras possíveis, mas a minha pessoa pode explanar o que acontece dentro de um QG ( Quartel General). Bem, pela minha visão individual, é claro que, outros militares tem uma visão diferente, mas a minha é mais complexa e verdadeira em muitos aspectos que os outros, de fato, não tem.</p>
+    <p>O Exército é formado por um tipo de hierarquia idiota, explicando melhor, é como uma escada, e no primeiro degrau desta escada estão os menosprezados soldados recrutas, para não se dizer escravos, de uma teia de aranha, a qual cairam ao se dizer voluntários para o sonhado Exército Brasileiro. Não tem como sair do exército a partir do momento em que você é incorporado para essa grande instituição, mesmo com o pensamento de desejar sair antes de completar o primeiro sonhado um ano de Exército. Sei de fato, que não ganharei a medalha de honra, pois falhei e cometi muitos erros. O que eles não sabem é que sou um simples humano e também cometo erros, por mais que eu possa evitar, acontece. Eles querem um soldado recruta que faça tudo em seus "<em>padrões militares</em>", bem, não pareço ser esse tal soldado recruta. Não quero orgulhar ninguém. Eu sou independente de emoções. Talvez eu tenha desligado as minhas emoções ou não sinta mais aquele apego familiar a bastante tempo.
+      Não sei se alguém jamais fez algo do tipo anteriormente em seus dias de servidão ao exército, mas também não serei o primeiro. <br>
+      Somos escravos de nosso país. Somos escravos de uma pátria que se diz idolatrada, mas não faz questão da existência de um soldado de baixo escalão, pois somos lembrados apenas como simples números ou o nosso simples sobrenome. Somos numerados de 600 até o 641, anteriormente, antes de o soldado 614 Teixeira se suicidar e, garanto aos senhores que a maioria de nós nunca ouviu o seu nome real além de seu sobrenome. Bem, o seu nome completo era Carlos Henrique da Silva Teixeira e ele era um rapaz que era silencioso e quieto. </p>
+    <p>Essas são as notícias internas feitas por um jovem que está enfrentando um tempo difícil e está pensando sobre a morte muito frequentemente. Talvez ele consiga, enfim, dar um fim ao seu pesadelo diário, que é acordar todos os dias se sentindo um fracassado de merda.</p>
+ </div>
+   
   </div>
 <div class="btn-2" id="btn-2">
 <div class="elementt"> <h1>NOTÍCIAS de MAIO</h1></div> 
@@ -184,8 +213,10 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
       </summary>
       <p><em>Quarta-feira, 8 de 2024</em>
       <br><br>
-      Na quarta-feira, dia 8, à meia-noite, um jovem militar de 18 anos cometeu suicídio ao pular de uma ponte em São Pedro do Sul, RS. O jovem foi levado as pressas para o Hospital, mas acabou morrendo horas depois. Ele foi identificado como Carlos Henrique Teixeira da Silva. Ele era conhecido apenas como Teixeira por seus colegas militares da Base Administrativa da Guarnição de Santa Maria. A razão pela qual ele decidiu terminar sua vida ainda é desconhecida, mas há especulações que sugerem que ele tinha problemas familiares. <img style="float:right;" src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" alt="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg"width="350">Além disso, não se sabe se ele sofria alguma pressão no meio militar que o levou a isso. Provavelmente, o ambiente militar pode ter causado algum dano psicológico nele. <br><br>
-      <em>"Um jovem que agonizou no hospital até o seu último suspiro. Descanse em paz Teixeira ✝"</em></p>
+     <div class="article">
+       <p>Na quarta-feira, dia 8, à meia-noite, um jovem militar de 18 anos cometeu suicídio ao pular de uma ponte em São Pedro do Sul, RS. O jovem foi levado as pressas para o Hospital, mas acabou morrendo horas depois. Ele foi identificado como Carlos Henrique Teixeira da Silva. Ele era conhecido apenas como Teixeira por seus colegas militares da Base Administrativa da Guarnição de Santa Maria. A razão pela qual ele decidiu terminar sua vida ainda é desconhecida, mas há especulações que sugerem que ele tinha problemas familiares. <img style="float:right;" src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" alt="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" width="350">Além disso, não se sabe se ele sofria alguma pressão no meio militar que o levou a isso. Provavelmente, o ambiente militar pode ter causado algum dano psicológico nele. <br><br>
+       <em>"Um jovem que agonizou no hospital até o seu último suspiro. Descanse em paz Teixeira ✝"</em></p></p>
+     </div> 
     </details> <br> <br>
     <details>
       <summary>
@@ -193,7 +224,9 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
       </summary>
       <p>Domingo, 26 de 2024
       <br><br>
-      Na noite de domingo, 26, um jovem militar identificado como Guilherme de Abreu Carvalho foi atropelado por um veículo enquanto estava bêbado no meio da estrada em frente ao Hotel de Trânsito em Santa Maria. A motorista parou o veículo para resgatar o jovem. O jovem estava muito bêbado e não queria ajuda. A motorista chamou por socorro. A ambulância dos bombeiros chegou e o levaram ao pronto atendimento, mas o jovem lutou contra os enfermeiros e, então, fugiu do hospital, decidindo voltar para o quartel. Mas o que ele não sabia é que seria punido por chegar bêbado lá. O coronel Soares não se preocupa com a saúde física ou mental de seus soldados, mas se preocupa principalmente com a imagem do Exército na mídia. Um vídeo do acidente estava ganhando visualizações, mas agora o coronel quer que o vídeo seja deletado dos celulares de todos. Que boa maneira de esconder a verdade, isso se chama manipulação, eles estão manipulando a todos. Eles querem transformar a verdade em mentira e deixar tudo em "<em>sigilo</em>".</p>
+     <div class="article">
+       <p>Na noite de domingo, 26, um jovem militar identificado como Guilherme de Abreu Carvalho foi atropelado por um veículo enquanto estava bêbado no meio da estrada em frente ao Hotel de Trânsito em Santa Maria. A motorista parou o veículo para resgatar o jovem. O jovem estava muito bêbado e não queria ajuda. A motorista chamou por socorro. A ambulância dos bombeiros chegou e o levaram ao pronto atendimento, mas o jovem lutou contra os enfermeiros e, então, fugiu do hospital, decidindo voltar para o quartel. Mas o que ele não sabia é que seria punido por chegar bêbado lá. O coronel Soares não se preocupa com a saúde física ou mental de seus soldados, mas se preocupa principalmente com a imagem do Exército na mídia. Um vídeo do acidente estava ganhando visualizações, mas agora o coronel quer que o vídeo seja deletado dos celulares de todos. Que boa maneira de esconder a verdade, isso se chama manipulação, eles estão manipulando a todos. Eles querem transformar a verdade em mentira e deixar tudo em "<em>sigilo</em>".</p>
+     </div> </p>
     </details>
 </div>
 <div class="btn-5" id="btn-5">
@@ -207,19 +240,23 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
      </summary>
      <p><em>Segunda-feira, 3 de 2024</em>
      <br><br>
-     Parece que o soldado Carvalho está realmente em apuros. Ele recebeu um Processo Disciplinar, e pode ser expulso do exército, mas ninguém sabe ao certo. O sargento Bergmann está muito irritado com ele. Todos estão tentando piorar as coisas para ele. Ninguém gosta realmente de Carvalho. Ele é um bêbado e um sujeito embaraçoso. Ele não merece estar no exército. As coisas estão prestes a piorar do que se imaginava, agora ele tem que pagar pelo dano do carro, o mesmo carro que o atropelou quando ele estava bêbado. E se ele simplesmente dissesse que tentou se matar? Ninguém se importa. O número azarado é 609, porque de ponta cabeça ainda é o mesmo, não muda, é uma maldição. E se ele tivesse se matado naquele dia? As pessoas realmente entenderiam o que ele estava sentindo, ou simplesmente seguiriam com suas vidas como fizeram quando Teixeira pulou da ponte?
-     <br><br>
-     <em>"Bem, há muitas pessoas que me odeiam agora. Todo mundo está falando. Não há como impedir que eles saibam o que eu fiz naquele dia: Destruí o sonho de alguém de fazer o curso de CFC (Curso de Formação de Cabos). Destruí o carro de alguém com meu corpo e também destruí minha própria vida no exército."</em></p>
+     <div class="article">
+       <p>Parece que o soldado Carvalho está realmente em apuros. Ele recebeu um Processo Disciplinar, e pode ser expulso do exército, mas ninguém sabe ao certo. O sargento Bergmann está muito irritado com ele. Todos estão tentando piorar as coisas para ele. Ninguém gosta realmente de Carvalho. Ele é um bêbado e um sujeito embaraçoso. Ele não merece estar no exército. As coisas estão prestes a piorar do que se imaginava, agora ele tem que pagar pelo dano do carro, o mesmo carro que o atropelou quando ele estava bêbado. E se ele simplesmente dissesse que tentou se matar? Ninguém se importa. O número azarado é 609, porque de ponta cabeça ainda é o mesmo, não muda, é uma maldição. E se ele tivesse se matado naquele dia? As pessoas realmente entenderiam o que ele estava sentindo, ou simplesmente seguiriam com suas vidas como fizeram quando Teixeira pulou da ponte?
+       <br><br>
+       <em>"Bem, há muitas pessoas que me odeiam agora. Todo mundo está falando. Não há como impedir que eles saibam o que eu fiz naquele dia: Destruí o sonho de alguém de fazer o curso de CFC (Curso de Formação de Cabos). Destruí o carro de alguém com meu corpo e também destruí minha própria vida no exército."</em></p>
+     </div></p>
    </details>
    <br><br>
    <details>
      <summary>
        <h3 style="color:red;">MILITAR É ASSEDIADO POR SOLDADO EMBRIAGADO NA 6ª BRIGADA DE INFANTARIA BLINDADA NIEDERAUER de SANTA MARIA</h3>
      </summary>
-     <p> <em>sexta-feira, 7 de 2024</em>
+     <p> <em>Sexta-feira, 7 de 2024</em>
        <br><br>
-       Nesta sexta-feira, a noite, um soldado chegou embriagado no Quartel e se dirigiu ao alojamento de cabo e soldado e passou o pênis na boca do soldado rancheiro 377, que estava dormindo no momento do acontecido. Sendo assim, o assédio ao companheiro de alojamento.
-       
+       <div class="article">
+         <p>Nesta sexta-feira, a noite, um soldado chegou embriagado no Quartel e se dirigiu ao alojamento de cabo e soldado e passou o pênis na boca do soldado rancheiro 377, que estava dormindo no momento do acontecido. Sendo assim, o assédio ao companheiro de alojamento.
+       </p>
+       </div>
      </p>
    </details>
 </div>
@@ -270,7 +307,7 @@ p {color:#FFFFFF;font-family: 'Times New Roman', Times, serif; text-align: justi
             }
           });
         } else {
-          root.style.setProperty('--bg-color', 'darkblue');
+          root.style.setProperty('--bg-color', 'darkred');
         }
       });
     });
