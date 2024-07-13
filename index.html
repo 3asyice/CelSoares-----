@@ -6,11 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
   <title>MirrorNEWS</title>
 </head>
 <style>
-  html, body {
-    background:  var(--bg-color);
+  html,
+  body {
+    background: var(--bg-color);
     justify-content: center;
     align-items: center;
     height: auto;
@@ -20,21 +24,22 @@
     line-height: 1.6;
     margin: 0;
     padding: 0;
-   
-    
-    
+
+
+
   }
-  
+
   :root {
-    --bg-color:#000107;
+    --bg-color: #000107;
   }
+
   .noticias {
     display: none;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background:  var(--bg-color);
+    background: var(--bg-color);
     overflow: auto;
     height: auto;
     position: fixed;
@@ -72,10 +77,18 @@
     display: grid;
     grid-template-rows: 30px 100px 25px;
   }
-p {color:#FFFFFF;  font-weight: 500;
-font-size: 2em;
-margin-top: 20px;   font-family: 'Libre Baskerville', 'Georgia', serif;
-text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
+
+  p {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 2em;
+    margin-top: 20px;
+    font-family: 'Libre Baskerville', 'Georgia', serif;
+    text-align: justify;
+    font-size: 2vh;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
   .element {
     background: #7F7F7F;
@@ -83,8 +96,9 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     justify-items: center;
-    
+
   }
+
   .elementt {
     background: #FF0000;
     color: #E5FF00;
@@ -92,6 +106,7 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
     text-align: center;
     justify-items: center;
   }
+
   .element-1 {
     background: var(--bg-color);
     color: #E5FF00;
@@ -99,80 +114,98 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
     text-align: center;
     justify-items: center;
   }
+
   .y {
-    color:#0050FF;
+    color: #0050FF;
   }
-  .btn-2, .btn-5 {
+
+  .btn-2,
+  .btn-5,
+  .themess {
     display: none;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background:  var(--bg-color);
+    background: var(--bg-color);
     overflow: auto;
     height: auto;
     position: fixed;
   }
+
   h3 {
-    color:#FFFFFF;
-    margin-left:25px;margin-right:25px;text-align: center;
-    padding:10px;
-    border:1px solid dimgray;
+    color: #FFFFFF;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid dimgray;
     font-family: 'Times New Roman', Times, serif;
   }
-  input, label {
-    color:white;
+
+  input,
+  label {
+    color: white;
   }
+
   .article p::first-letter {
-            font-size: 3em; /* Aumenta o tamanho da primeira letra */
-            float: left; /* Faz com que a letra fique ao lado do texto */
-            margin-right: 0.1em; /* Espaço entre a letra e o resto do texto */
-            line-height: 1; /* Ajusta o alinhamento vertical */
-            font-weight: bold; /* Faz a letra ficar em negrito */
-        }
+    font-size: 3em;
+    /* Aumenta o tamanho da primeira letra */
+    float: left;
+    /* Faz com que a letra fique ao lado do texto */
+    margin-right: 0.1em;
+    /* Espaço entre a letra e o resto do texto */
+    line-height: 1;
+    /* Ajusta o alinhamento vertical */
+    font-weight: bold;
+    /* Faz a letra ficar em negrito */
+  }
+
   .osTemas {
     display: none;
     top: 50px;
-    right:0;
+    right: 0;
     left: 50%;
     bottom: 490px;
     background: var(--bg-color);
     overflow: auto;
-    height: auto; 
+    height: auto;
     position: fixed;
-    border:2px solid navajowhite;
+    border: 2px solid navajowhite;
   }
+
   .article {
     max-width: 800px;
-    margin: 0 auto;
+    7 margin: 0 auto;
   }
 </style>
 
 <body>
   <button style="float:right;" class="btn--1" onclick="themes()">Temas</button>
-<br><br><div class="osTemas" id="osTemas">
+  <br><br>
+  <div class="osTemas" id="osTemas">
     <form id="colorForm">
-       
-        
-        <label>
-            <input type="checkbox" name="color" value="#240000"> Vermelho
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="color" value="#002208"> Verde
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="color" value="#001424"> Azul
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="color" value="#202200"> Amarelo
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="color" value="#140024"> Roxo
-        </label>
+
+
+      <label>
+        <input type="checkbox" name="color" value="#240000"> Vermelho
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="color" value="#002208"> Verde
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="color" value="#001424"> Azul
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="color" value="#202200"> Amarelo
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="color" value="#140024"> Roxo
+      </label>
     </form>
 
   </div>
@@ -185,81 +218,253 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
 
   </div>
   <div class="noticias" id="noticias">
-  <div class="element"> <h1 style="color:gold;">DANGER NEWS</h1></div> 
+    <div class="element">
+      <h1 style="color:gold;">DANGER NEWS</h1>
+    </div>
     <button style="margin-left:20px;" class="btn--1" onclick="news()">VOLTAR</button>
     <div class="element-1">
-      
-       <button class="btn--1" onclick="buttonOne()">NOTÍCIAS DE MAIO</button> <br> <br>
-       <button class="btn--1" onclick="buttonTwo()">NOTÍCIAS DE JUNHO</button>
+
+      <button class="btn--1" onclick="buttonOne()">NOTÍCIAS DE MAIO</button> <br> <br>
+      <button class="btn--1" onclick="buttonTwo()">NOTÍCIAS DE JUNHO</button> <br><br>
+      <button class="btn--1" onclick="otema()">NOTÍCIAS DE JULHO</button>
     </div>
- <div class="article">
-    <p>Por favor, deixe-me apresentar-me, sou os Olhos e Ouvidos que todos deixam passar despercebido, é um prazer conhecê-los. Essa é a natureza de meu jogo.
-      Bem, o exército é um grande pesadelo, nada de mão amiga, ora, pois é o que dizem, então, posso dizer muito do contrário, porque o Exército Brasileiro é bem mais conhecido como <em>"mãos inimigas"</em>, descobri isso com experiência própria, pois passei uma experiência ruim no Exército. E vai por mim, o Exército é tudo uma grande farsa, não é mesmo senhor sargento Saueressig? Obrigado ao senhor pela graciosa sindicância a tanto merecida. Quando você tem 12 anos costuma pensar que o exército faz milhares de coisas divertidas, bem, é muito o contrário disso. Nós não saltamos de avião e, nós não dirigimos carros de combate (os famosos blindados usados literalmente como enfeites).</p>
-    <p>Com todo o respeito: <em>"Foda-se o sigilo do Exército Brasileiro!"</em><br><br>O Exército pode te ferrar de várias maneiras possíveis, mas a minha pessoa pode explanar o que acontece dentro de um QG ( Quartel General). Bem, pela minha visão individual, é claro que, outros militares tem uma visão diferente, mas a minha é mais complexa e verdadeira em muitos aspectos que os outros, de fato, não tem.</p>
-    <p>O Exército é formado por um tipo de hierarquia idiota, explicando melhor, é como uma escada, e no primeiro degrau desta escada estão os menosprezados soldados recrutas, para não se dizer escravos, de uma teia de aranha, a qual cairam ao se dizer voluntários para o sonhado Exército Brasileiro. Não tem como sair do exército a partir do momento em que você é incorporado para essa grande instituição, mesmo com o pensamento de desejar sair antes de completar o primeiro sonhado um ano de Exército. Sei de fato, que não ganharei a medalha de honra, pois falhei e cometi muitos erros. O que eles não sabem é que sou um simples humano e também cometo erros, por mais que eu possa evitar, acontece. Eles querem um soldado recruta que faça tudo em seus "<em>padrões militares</em>", bem, não pareço ser esse tal soldado recruta. Não quero orgulhar ninguém. Eu sou independente de emoções. Talvez eu tenha desligado as minhas emoções ou não sinta mais aquele apego familiar a bastante tempo.
-      Não sei se alguém jamais fez algo do tipo anteriormente em seus dias de servidão ao exército, mas também não serei o primeiro. <br>
-      Somos escravos de nosso país. Somos escravos de uma pátria que se diz idolatrada, mas não faz questão da existência de um soldado de baixo escalão, pois somos lembrados apenas como simples números ou o nosso simples sobrenome. Somos numerados de 600 até o 641, anteriormente, antes de o soldado 614 Teixeira se suicidar e, garanto aos senhores que a maioria de nós nunca ouviu o seu nome real além de seu sobrenome. Bem, o seu nome completo era Carlos Henrique da Silva Teixeira e ele era um rapaz que era silencioso e quieto. </p>
-    <p>Essas são as notícias internas feitas por um jovem que está enfrentando um tempo difícil e está pensando sobre a morte muito frequentemente. Talvez ele consiga, enfim, dar um fim ao seu pesadelo diário, que é acordar todos os dias se sentindo um fracassado de merda.</p>
- </div>
-   
+    <div class="article">
+      <p>Por favor, deixe-me apresentar-me, sou os Olhos e Ouvidos que todos deixam passar despercebido, é um prazer conhecê-los. Essa é a natureza de meu jogo.
+        Bem, o exército é um grande pesadelo, nada de mão amiga, ora, pois é o que dizem, então, posso dizer muito do contrário, porque o Exército Brasileiro é bem mais conhecido como <em>"mãos inimigas"</em>, descobri isso com experiência própria, pois passei uma experiência ruim no Exército. E vai por mim, o Exército é tudo uma grande farsa, não é mesmo senhor sargento Saueressig? Obrigado ao senhor pela graciosa sindicância a tanto merecida. Quando você tem 12 anos costuma pensar que o exército faz milhares de coisas divertidas, bem, é muito o contrário disso. Nós não saltamos de avião e, nós não dirigimos carros de combate (os famosos blindados usados literalmente como enfeites).</p>
+      <p>Com todo o respeito: <em>"Foda-se o sigilo do Exército Brasileiro!"</em><br><br>O Exército pode te ferrar de várias maneiras possíveis, mas a minha pessoa pode explanar o que acontece dentro de um QG ( Quartel General). Bem, pela minha visão individual, é claro que, outros militares tem uma visão diferente, mas a minha é mais complexa e verdadeira em muitos aspectos que os outros, de fato, não tem.</p>
+      <p>O Exército é formado por um tipo de hierarquia idiota, explicando melhor, é como uma escada, e no primeiro degrau desta escada estão os menosprezados soldados recrutas, para não se dizer escravos, de uma teia de aranha, a qual cairam ao se dizer voluntários para o sonhado Exército Brasileiro. Não tem como sair do exército a partir do momento em que você é incorporado para essa grande instituição, mesmo com o pensamento de desejar sair antes de completar o primeiro sonhado um ano de Exército. Sei de fato, que não ganharei a medalha de honra, pois falhei e cometi muitos erros. O que eles não sabem é que sou um simples humano e também cometo erros, por mais que eu possa evitar, acontece. Eles querem um soldado recruta que faça tudo em seus "<em>padrões militares</em>", bem, não pareço ser esse tal soldado recruta. Não quero orgulhar ninguém. Eu sou independente de emoções. Talvez eu tenha desligado as minhas emoções ou não sinta mais aquele apego familiar a bastante tempo.
+        Não sei se alguém jamais fez algo do tipo anteriormente em seus dias de servidão ao exército, mas também não serei o primeiro. <br>
+        Somos escravos de nosso país. Somos escravos de uma pátria que se diz idolatrada, mas não faz questão da existência de um soldado de baixo escalão, pois somos lembrados apenas como simples números ou o nosso simples sobrenome. Somos numerados de 600 até o 641, anteriormente, antes de o soldado 614 Teixeira se suicidar e, garanto aos senhores que a maioria de nós nunca ouviu o seu nome real além de seu sobrenome. Bem, o seu nome completo era Carlos Henrique da Silva Teixeira e ele era um rapaz que era silencioso e quieto. </p>
+      <p>Essas são as notícias internas feitas por um jovem que está enfrentando um tempo difícil e está pensando sobre a morte muito frequentemente. Talvez ele consiga, enfim, dar um fim ao seu pesadelo diário, que é acordar todos os dias se sentindo um fracassado de merda.</p>
+    </div>
+
   </div>
-<div class="btn-2" id="btn-2">
-<div class="elementt"> <h1>NOTÍCIAS de MAIO</h1></div> 
+  <div class="btn-2" id="btn-2">
+    <div class="elementt">
+      <h1>NOTÍCIAS de MAIO</h1>
+    </div>
     <button style="margin-left:20px;" class="btn--1" onclick="buttonOne()">VOLTAR</button>
-    
+
     <details>
       <summary>
         <h3 style="color:red;">JOVEM MILITAR QUE PULOU DE PONTE MORRE EM HOSPITAL</h3>
       </summary>
       <p><em>Quarta-feira, 8 de 2024</em>
-      <br><br>
-     <div class="article">
-       <p>Na quarta-feira, dia 8, à meia-noite, um jovem militar de 18 anos cometeu suicídio ao pular de uma ponte em São Pedro do Sul, RS. O jovem foi levado as pressas para o Hospital, mas acabou morrendo horas depois. Ele foi identificado como Carlos Henrique Teixeira da Silva. Ele era conhecido apenas como Teixeira por seus colegas militares da Base Administrativa da Guarnição de Santa Maria. A razão pela qual ele decidiu terminar sua vida ainda é desconhecida, mas há especulações que sugerem que ele tinha problemas familiares. <img style="float:right;" src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" alt="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" width="350">Além disso, não se sabe se ele sofria alguma pressão no meio militar que o levou a isso. Provavelmente, o ambiente militar pode ter causado algum dano psicológico nele. <br><br>
-       <em>"Um jovem que agonizou no hospital até o seu último suspiro. Descanse em paz Teixeira ✝"</em></p></p>
-     </div> 
+        <br><br>
+      <div class="article">
+        <p>Na quarta-feira, dia 8, à meia-noite, um jovem militar de 18 anos cometeu suicídio ao pular de uma ponte em São Pedro do Sul, RS. O jovem foi levado as pressas para o Hospital, mas acabou morrendo horas depois. Ele foi identificado como Carlos Henrique Teixeira da Silva. Ele era conhecido apenas como Teixeira por seus colegas militares da Base Administrativa da Guarnição de Santa Maria. A razão pela qual ele decidiu terminar sua vida ainda é desconhecida, mas há especulações que sugerem que ele tinha problemas familiares. <img style="float:right;" src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" alt="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/CarlosHenriqueTeixeiraDaSilva.jpg" width="350">Além disso, não se sabe se ele sofria alguma pressão no meio militar que o levou a isso. Provavelmente, o ambiente militar pode ter causado algum dano psicológico nele. <br><br>
+          <em>"Um jovem que agonizou no hospital até o seu último suspiro. Descanse em paz Teixeira ✝"</em>
+        </p>
+        </p>
+      </div>
     </details> <br> <br>
     <details>
       <summary>
         <h3 style="color:red;">MILITAR EMBRIAGADO É ATROPELADO NA AVENIDA LIBERDADE</h3>
       </summary>
       <p>Domingo, 26 de 2024
-      <br><br>
-     <div class="article">
-       <p>Na noite de domingo, 26, um jovem militar identificado como Guilherme de Abreu Carvalho foi atropelado por um veículo enquanto estava bêbado no meio da estrada em frente ao Hotel de Trânsito em Santa Maria. A motorista parou o veículo para resgatar o jovem. O jovem estava muito bêbado e não queria ajuda. A motorista chamou por socorro. A ambulância dos bombeiros chegou e o levaram ao pronto atendimento, mas o jovem lutou contra os enfermeiros e, então, fugiu do hospital, decidindo voltar para o quartel. Mas o que ele não sabia é que seria punido por chegar bêbado lá. O coronel Soares não se preocupa com a saúde física ou mental de seus soldados, mas se preocupa principalmente com a imagem do Exército na mídia. Um vídeo do acidente estava ganhando visualizações, mas agora o coronel quer que o vídeo seja deletado dos celulares de todos. Que boa maneira de esconder a verdade, isso se chama manipulação, eles estão manipulando a todos. Eles querem transformar a verdade em mentira e deixar tudo em "<em>sigilo</em>".</p>
-     </div> </p>
+        <br><br>
+      <div class="article">
+        <p>Na noite de domingo, 26, um jovem militar identificado como Guilherme de Abreu Carvalho foi atropelado por um veículo enquanto estava bêbado no meio da estrada em frente ao Hotel de Trânsito em Santa Maria. A motorista parou o veículo para resgatar o jovem. <br><br>O jovem estava muito bêbado e não queria ajuda. A motorista chamou por socorro. A ambulância dos bombeiros chegou e o levaram ao pronto atendimento, mas o jovem lutou contra os enfermeiros e, então, fugiu do hospital, decidindo voltar para o quartel. Mas o que ele não sabia é que seria punido por chegar bêbado lá. <br><br> O coronel Soares não se preocupa com a saúde física ou mental de seus soldados, mas se preocupa principalmente com a imagem do Exército na mídia. Um vídeo do acidente estava ganhando visualizações, mas agora o coronel quer que o vídeo seja deletado dos celulares de todos. Que boa maneira de esconder a verdade, isso se chama manipulação, eles estão manipulando a todos. Eles querem transformar a verdade em mentira e deixar tudo em "<em>sigilo</em>".</p>
+      </div>
+      </p>
     </details>
-</div>
-<div class="btn-5" id="btn-5">
-  <div class="elementt">
-    <h1 style="font-size: 25px;">NOTÍCIAS de JUNHO</h1>
+    <details>
+      <summary>
+        <h3 style="color:red">A ALTERAÇÃO</h3>
+      </summary>
+      <div class="article">
+        <p>Relatos de um militar: <em> "Confesso que no dia 26 de maio de 2024 sai do quartel 14:45 PM e com a companhia do soldado 612 Gonçalves, compramos um Dreher e uma coca-cola e um saco de gelo e nos direcionamos para a praça do Mallet, onde esperamos o soldado 628 Anderson chegar para beber junto. <br><br>Havia nove adolescentes jogando um futebol na praça do Mallet. O Gonçalves e o Anderson pediram para jogar futebol, e enquanto isso, fiquei sentado no banco bebendo todo o Dreher com a coca-cola e o gelo.<br><br> Nesse momento, lembro de ter me sentido tonto e zonzo. Quando o jogo de futebol acabou devia ser por volta de 16h30min. <br><br>Eu, o identificado soldado 609 Carvalho e o soldado Gonçalves procuramos outro bar para compraruma carteira de cigarros, de certa forma, concordei em comprar um velho barreiro. Foi então que na metade dessa tal de bebida, em que, perdi totalmente o controle de mim mesmo. <br><br> O Anderson tinha tomado o seu rumo para a sua casa, e, o céu estava escurecendo. Lembro de o Gonçalves tentar me levar para o Shopping para me ajudar a curar o porre, porém, ambos estávamos realmente embriagados e mal conseguíamos ficar em pé, mas não caminhamos muito longe do Mallet, pois em um momento em que a bebida tomou o controle total de minhas ações, me fez de marionete, e corri sem controle para atravessar a rua sem olhar para os dois lados da avenida, nesse momento, em que, um carro colidiu contra mim. Nós estávamos na frente do Hotel de Trânsito da rua Liberdade. Bem, fiquei nada ferido, mas estava nocauteado no chão. A mulher do carro, Camila, chamou a ambulância dos bombeiros. <br><br>Comecei uma briga contra o Gonçalves quando a ambulância dos bombeiros chegou para me ajudar, lembro de recusar qualquer ajuda, mas conseguiram ir contra as minhas forças, até que me rendi. O Gonçalves esperou do lado de fora do Hospital e, eu continuava a recusar ser atendido forçadamente, até que, fugi do Hospital. É o que me arrependo demais de ter feito.<br><br> O Gonçalves me emprestou os tênis dele, pois de alguma forma, havia perdido os meus tênis em algum lugar, sendo assim, o Gonçalves ficou descalço.<br> <br>Foi então que decidimos voltar ao Quartel, mas ao chegar na guarda, a sargento comandante da Guarda, a sargento Trindade, pediu os meus documentos, mas não os encontrei e acabei entregando para a comandante da guarda a primeira coisa que encontrei em meus bolsos: um pedaço amassado de papel higiênico. <br><br>
+            Ela ligou imediatamente para o sargento de dia: o sargento Bergmann. Depois disso entrei em um tipo de discussão com a comandante da guarda.
+            Ele chegou na guarda e levou nós para o alojamento e me fez tomar dois banhos gelados, um foi na lavanderia".</em></p>
+      </div>
+    </details>
   </div>
-   <button style="margin-left: 20px;margin-top: 12px" class="btn--1" onclick="buttonTwo()">VOLTAR</button>
-   <details>
-     <summary>
-       <h3 style="color:red;">BOAS NOTÍCIAS PARA PESSOAS QUE AMAM NOTÍCIAS RUINS</h3>
-     </summary>
-     <p><em>Segunda-feira, 3 de 2024</em>
-     <br><br>
-     <div class="article">
-       <p>Parece que o soldado Carvalho está realmente em apuros. Ele recebeu um Processo Disciplinar, e pode ser expulso do exército, mas ninguém sabe ao certo. O sargento Bergmann está muito irritado com ele. Todos estão tentando piorar as coisas para ele. Ninguém gosta realmente de Carvalho. Ele é um bêbado e um sujeito embaraçoso. Ele não merece estar no exército. As coisas estão prestes a piorar do que se imaginava, agora ele tem que pagar pelo dano do carro, o mesmo carro que o atropelou quando ele estava bêbado. E se ele simplesmente dissesse que tentou se matar? Ninguém se importa. O número azarado é 609, porque de ponta cabeça ainda é o mesmo, não muda, é uma maldição. E se ele tivesse se matado naquele dia? As pessoas realmente entenderiam o que ele estava sentindo, ou simplesmente seguiriam com suas vidas como fizeram quando Teixeira pulou da ponte?
-       <br><br>
-       <em>"Bem, há muitas pessoas que me odeiam agora. Todo mundo está falando. Não há como impedir que eles saibam o que eu fiz naquele dia: Destruí o sonho de alguém de fazer o curso de CFC (Curso de Formação de Cabos). Destruí o carro de alguém com meu corpo e também destruí minha própria vida no exército."</em></p>
-     </div></p>
-   </details>
-   <br><br>
-   <details>
-     <summary>
-       <h3 style="color:red;">MILITAR É ASSEDIADO POR SOLDADO EMBRIAGADO NA 6ª BRIGADA DE INFANTARIA BLINDADA NIEDERAUER de SANTA MARIA</h3>
-     </summary>
-     <p> <em>Sexta-feira, 7 de 2024</em>
-       <br><br>
-       <div class="article">
-         <p>Nesta sexta-feira, a noite, um soldado chegou embriagado no Quartel e se dirigiu ao alojamento de cabo e soldado e passou o pênis na boca do soldado rancheiro 377, que estava dormindo no momento do acontecido. Sendo assim, o assédio ao companheiro de alojamento.
-       </p>
-       </div>
-     </p>
-   </details>
+  <div class="btn-5" id="btn-5">
+    <div class="elementt">
+      <h1 style="font-size: 25px;">NOTÍCIAS de JUNHO</h1>
+    </div>
+    <button style="margin-left: 20px;margin-top: 12px" class="btn--1" onclick="buttonTwo()">VOLTAR</button>
+    <details>
+      <summary>
+        <h3 style="color:red;">BOAS NOTÍCIAS PARA PESSOAS QUE AMAM NOTÍCIAS RUINS</h3>
+      </summary>
+      <p><em>Segunda-feira, 3 de 2024</em>
+        <br><br>
+      <div class="article">
+        <p>Parece que o soldado Carvalho está realmente em apuros. Ele recebeu um Processo Disciplinar, e pode ser expulso do exército, mas ninguém sabe ao certo. O sargento Bergmann está muito irritado com ele. Todos estão tentando piorar as coisas para ele. Ninguém gosta realmente de Carvalho. Ele é um bêbado e um sujeito embaraçoso. Ele não merece estar no exército. As coisas estão prestes a piorar do que se imaginava, agora ele tem que pagar pelo dano do carro, o mesmo carro que o atropelou quando ele estava bêbado. E se ele simplesmente dissesse que tentou se matar? Ninguém se importa. O número azarado é 609, porque de ponta cabeça ainda é o mesmo, não muda, é uma maldição. E se ele tivesse se matado naquele dia? As pessoas realmente entenderiam o que ele estava sentindo, ou simplesmente seguiriam com suas vidas como fizeram quando Teixeira pulou da ponte?
+          <br><br>
+          <em>"Bem, há muitas pessoas que me odeiam agora. Todo mundo está falando. Não há como impedir que eles saibam o que eu fiz naquele dia: Destruí o sonho de alguém de fazer o curso de CFC (Curso de Formação de Cabos). Destruí o carro de alguém com meu corpo e também destruí minha própria vida no exército."</em>
+        </p>
+      </div>
+      </p>
+    </details>
+    <br><br>
+    <details>
+      <summary>
+        <h3 style="color:red;">MILITAR É ASSEDIADO POR SOLDADO EMBRIAGADO NA 6ª BRIGADA DE INFANTARIA BLINDADA NIEDERAUER de SANTA MARIA</h3>
+      </summary>
+      <p> <em>Sexta-feira, 7 de 2024</em>
+        <br><br>
+      <div class="article">
+        <p>Nesta sexta-feira, a noite, um soldado chegou embriagado no Quartel e se dirigiu ao alojamento de cabo e soldado e passou o pênis na boca do soldado rancheiro 377, que estava dormindo no momento do acontecido. Sendo assim, o assédio ao companheiro de alojamento.
+        </p>
+      </div>
+      </p>
+    </details>
+    <details>
+      <summary>
+        <h3 style="color:red">Dados Importantes</h3>
+      </summary>
+      <div class="article">
+        <p style="color:red;">Localidade: 6ª Brigada de Infantaria Blindada - Brigada Niederauer
+          Rua Borges de Medeiros, 1515, CEP: 97015-090 - Santa Maria - RS.
+        </p>
+      </div>
+      <div class="article">
+        <p style="color:yellow">Armamento: Fuzil 7,62 é a arma principal usada neste Quartel General.
+        </p>
+      </div>
+      <img style="margin: 20%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6t7IplRtWu9FIgZc0xg5Hx3BzhhZ_dSMCHL_ZRlP_va0Q_kuzuWC7bo0&s=10" width="250">
+      <div class="article">
+        <p style="color:orange">Existe um sistema de monitoramento com câmeras em vários pontos de entrada e saída que pode ser mostrado em locais com câmeras vigilântes. E vai por mim existem lugares realmente fáceis de invadir em muitos pontos de entrada. O P3 é um exemplo de como o quartel entraria em PDA por uma invasão.</p>
+      </div>
+      <div class="article">
+        <p style="color:green">Abaixo está um mapa com os postos de sentinelas deste Quartel General. O perimetro de 1.018,17 m e a área de 58.788,03 m².
+          <img src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/%20Sentinelas.jpg" alt="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/%20Sentinelas.jpg" width="100%">
+          <br> No ponto vermelho a direita é o sentinela do P1. <br>
+          O ponto abaixo é o P4 e o sentinela fica localizado dentro de uma guarita no alto do muro do Quartel.
+          <br>
+          O famoso P3 é o mais assombrado e o que mais precisa ficar atento. Esse é o sentinela localizado no ponto vermelho da esquerda. Também é o sentinela mais distante do P1.
+          <br>
+          O P2 é localizado em uma guarita dentro do Quartel. O ponto vermelho de cima é onde o sentinela do P2 se localiza no mapa.
+        </p>
+
+        <br><br>
+        <p style="color:darkred">O mais divertido são os quartos de horas dos sentinelas de guarda. Existem o 1°, o 2° e o 3° quartos de horas, sendo o 2° o mais desafiador de todos. Ao total são 12 sentinelas distribuidos em 4 para cada quarto de hora.</p>
+        <p style="color: darkred">1° QH <br>
+          08h30min / 10h - <span style="color:yellow">hora</span> <br>
+          10h / 12h - <span style="color:green">descanso</span> (almoço 11h45min) <br>
+          12h / 14h - <span style="color:blue">banco</span> <br>
+          14h / 16h - <span style="color:yellow">hora</span> <br>
+          16h / 18h - <span style="color:green">descanso</span> (jantar 17h45min) <br>
+          18h / 20h - <span style="color:blue">banco</span> (pernoite 19h e ceia) <br>
+          20h / 22h - <span style="color:yellow">hora</span> <br>
+          22h / 00h - <span style="color:green">descanso</span> <br>
+          00h / 02h - <span style="color:blue">banco</span> <br>
+          02h / 04h - <span style="color:yellow">hora</span> <br>
+          04h / 06h - <span style="color:green">descanso</span> (café 05h45min)<br>
+          06h / 08h - <span style="color:blue">banco</span> (faxina)</p>
+        <p style="color:darkred">2° QH <br>
+          08h30min / 10h - <span style="color:blue">banco</span> <br>
+          10h / 12h - <span style="color:yellow">hora</span> <br>
+          12h / 14h - <span style="color:red"> descanso</span> (almoço) <br>
+          14h / 16h - <span style="color:blue">banco</span> <br>
+          16h / 18h - <span style="color:yellow">hora</span>
+          <br> 18h / 20h -<span style="color:red"> descanso</span> (jantar, pernoite e ceia)
+          <br> 20h / 22h - <span style="color:blue">banco</span>
+          <br> 22h / 00h - <span style="color:yellow">hora</span>
+          <br> 00h - 02h - <span style="color:green">descanso</span>
+          <br /> 02h / 04h - <span style="color:blue">banco</span>
+          <br> 04h / 06h - <span style="color:yellow">hora</span>
+          <br> 06h / 08h - <span style="color:red">descanso</span> (café e faxina)
+        </p>
+        <p style="color:darkred">3° QH <br>
+          08h30min / 10h - <span style="color:green">descanso</span>
+          <br> 10h / 12h - <span style="color:blue">banco</span> (almoço 11h30min)
+          <br> 12h / 14h - <span style="color:yellow">hora</span>
+          <br> 14h / 16h - <span style="color:green">descanso</span>
+          <br> 16h / 18h - <span style="color:blue">banco</span> (jantar 17h30min)
+          <br> 18h / 20h - <span style="color:yellow">hora</span>
+          <br> 20h / 22h - <span style="color:green">descanso</span> (ceia)
+          <br> 22h / 00h - <span style="color:blue">banco</span>
+          <br> 00h / 02h - <span style="color:yellow">hora</span>
+          <br> 02h / 04h - <span style="color:green">descanso</span>
+          <br> 04h / 06h - <span style="color:blue">banco</span> (café 05h30min)
+          <br> 06h / 08h30min - <span style="color:yellow">hora</span>
+        </p>
+      </div>
+
+    </details>
+
+  </div>
+  <div class="themess" id="themess">
+    <div class="elementt">
+      <h1 style="font-size:25px">JULHO NEWS</h1>
+    </div>
+    <button style="margin-left:20px;margin-top:15px" class="btn--1" onclick="otema()">VOLTAR</button>
+    <details>
+      <summary>
+        <h3>MILITAR É EXPULSO DO QUARTEL GENERAL DA 6ª BRIGADA DE SANTA MARIA</h3>
+      </summary>
+      <p><em>Quinta-feira, 11 de Julho</em> <br><br> </p>
+      <p>Nesta manhã a sindicância investigativa foi encerrada e más notícias surgiram para o ex-soldado ev Carvalho, ou mais especifico, seu nome civil, Guilherme de Abreu <strong>Carvalho</strong>. Ele recebeu um certificado de <em><strong>licenciamento a bem da disciplina</strong></em>. O que significa que ele não é mais obrigado a cumprir o seu tempo com os serviços militar. O lado realmente negativo de tudo isto é de ele não poder fazer uma faculdade ou um concurso público no período de dois anos. O Exército Brasileiro prejudicou a vida do jovem, em um nível, por assim dizer, o mais alto nível de prejudicial. Ele não poderá assinar a sua carteira de trabalho, pois não será ninguém até esses dois anos passarem. Isso foi mais uma injustiça do coronel Soares. Bem, ele não sabe que está perdendendo um ótimo soldado e provavelmente jamais vai saber disso.</p>
+    </details>
+    <details>
+      <summary>
+        <h3>SOLUÇÃO DE SINDICÂNCIA <br>
+       <span><p style="text-align:center">NUP 65402.004444/2024-12</p></span> </h3>
+      </summary>
+      <p style="text-align: center">MINISTÉRIO DA DEFESA <br>
+      EXÉRCITO BRASILEIRO <br>
+      COMANDO MILITAR DO SUL <br>
+      BASE ADMINISTRATIVA DA GUARNIÇÃO DE SANTA MARIA</p>
+      <div class="article">
+      <p>Da análise das averiguações que mandei proceder por intermédio do 1° Sgt VITOR CACIANO <strong>SAUERESSIG</strong>, da B Adm Gu SM, por intermédio da Portaria n° 014-Cmt/B Adm Gu SM, de 3 de junho de 2024 (Fl. 04), com a finalidade de averiguar as circunstâncias em torno do fato, para verificar se o evento caracteriza "acidente em serviço", bem como se houve negligência, imprudência, imperícia, indícios de crime militar, crime comum ou transgressão disciplinar, por parte do Sd EV GUILHERME DE ABREU <strong>CARVALHO</strong>, resolvo <strong>CONCORDAR</strong> com o parecer do Sindicante, no sentido de que o evento <strong>caracteriza transgressão disciplinar passível de punição</strong>, prevista no Regulamento Disciplinar do Exército, amparando nos seguintes fatos e fundamentos: <br><br>
+      
+     
+     
+      </p>
+      <p>A abertura da presente sindicância foi realizada em razão do conhecimento, por parte deste Comando, do Boletim de Ocorrência n° 10343/2024/983062 (Fls. 5-7), com <strong>data de comunicação</strong> em 26 MAIO 24 e de <strong>registro</strong> em 29 MAIO 24, emitido pela Brigada Militar do Estado do Rio Grande do Sul, envolvendo o militar GUILHERME DE ABREU <strong>CARVALHO</strong> (Sd EV), o qual presta serviço militar inicial obrigatório nesta Base Administrativa;<br><br></p> 
+    
+      <p>O histórico do relato policial anexo ao Boletim acima mencionado (Fl. 7), em linhas gerais, informa ocorrência de atropelamento, o qual teve como vítima o Sd EV GUILHERME DE ABREU <strong>CARVALHO</strong>, que foi conduzido, após o ocorrido, pela Equipe do Corpo de Bombeiros até a UPA Patronato. Relata ainda, que quando a Guarnição chegou ao local para onde o soldado foi conduzido para atendimento, o referido militar já tinha se deslocado daquele lugar, tendo recusado atendimento devido encontrar-se embriagado, conforme informação prestada pelo médico Lucas Rodrigues. O documento traz ainda, como acusada do atropelamento, a senhora CAMILA DALCOL DA SILVA, que trafegava seu veículo TOYOTA/ETIOS, placa IUE-3045, pela Avenida Liberdade, quando um indivíduo repentinamente se atirou em frente ao seu veículo;<br><br>
+      </p>
+      <p>Em seu Termo de Inquirição de Testemunha (Fls. 14-15), a senhora CAMILA DALCOL DA SILVA, ao ser indagada sobre como ocorreu o acidente, aduziu que estava trafegando pela Avenida Liberdade nas proximidades da esquina da Rua Venâncio Aires, nesta cidade, quando avistou o Sd CARVALHO <em>"atravessando a rua na frente do seu carro e posteriormente se jogando no Capô"</em>(<em>litteris</em>). Afirma ainda, que após o acidente desceu do seu carro e automóvel, prestou os primeiros socorros e acionou os bombeiros, que chegaram por volta de 15 minutos após serem acionados, enquanto que a Brigada Militar também compareceu ao local, cerca de uma hora após o ocorrido. Assevera ainda, que o acidente ocorreu por volta das 18 horas e 45 minutosdo dia 26 de maio de 2024, que possui um vídeo do acidente e que irá entregá-lo para compor os autos, e que o Sd CARVALHO tinha sinais comportamentais alterados, conforme outros vídeos anteriores ao acidente, que comprovam tal afirmação, e que também serão entregues para compor o processo; <br><br></p>
+      <p>No termo de Inquirição de Testemunha do Sd CARVALHO (Fls. 18-19), o mesmo confirma a data e o local do acidente, os quais vão ao encontro do depoimento da Sra. CAMILA DALCOL DA SILVA. Afirmou ainda, quando indagado sobre a forma em que ocorreu o acidente, que <em>"estava bastante embriagado e lembra de ter corrido ao atravessar a avenida Liberdade e o Sd GONÇALVES que estava junto começou a gritar para ter cuidado, porque a avenida estava movimentada. Não chegou a atravessar a avenida e resolveu retornar, quando percebeu um flash de luz de um carro que esfava passando no momento e veio a colidir com ele"</em> (<em>litteris</em>). Ainda, em prosseguimento a seu depoimento, relata ter se evadido do pronto atendimento sem o devido tratamento e consentimento dos profissionais de saúde, que após isto rumaram para a Base Administrativa da Guarnição de Santa Maria; <br><br></p>
+      <p>Quando interpelado sobre o que fez antes de ocorrer o acidente, aduziu que saiu com o Sd GONÇALVES, compraram 1 litro de conhaque Dreher, uma coca-cola e um saco de gelo e foram beber na praça do Mallet. No local, aguardaram a chegada do Sd ANDERSON para beber junto, e no transcurso da tarde os soldados ANDERSON E GONÇALVES foram jogar futebol com outras pessoas, enquanto o mesmo ficou bebendo sozinho até secar oblitro de conhaque. Após o término do jogo, nas proximidades do lugar adquiriram uma garrafa de bebida alcoólica (Velho Barreiro), que consumiram até chegar a sua metade. Resolveram sair caminhar, seguindo ideia do Sd GONÇALVES, para ver se curavam a ressaca antes de retornar ao quartel, quando ocorreu o acidente. Por fim, quando questionado, se teve alguma lesão ou ficou com alguma sequela por conta do acidente, respondeu que <strong>NÃO</strong>; <br><br /></p>
+      <p>Analisando o Termo de Inquirição de Testemunha do Sd GONÇALVES (Fls. 23-24), o mesmo é totalmente conzdizente com o Sd CARVALHO, naquilo que tange aos momentos e atitudes anteriores ao acidente, local para onde se deslocaram para beber, lugar e horário do atropelamento e providências adotadas pela Sra. CAMILA, que prestou os primeiros socorros e acionou os Órgãos de Atendimento e Segurança Pública, até a evasão do sindicado do PA Patronato, e seu deslocamento até o aquartelamento; <br><br></p>
+      <p>Ao realizar o comparativo entre o depoimento das testemunhas acima descritos, não foram verificadas contradições entre os mesmos, naquilo que diz respeito à existência, horário, local e acontecimento relativos ao incidente aludido; <br><br></p>
+      <p>Após a análise dos termos de inquirição das testemunhas, e di que estava anexo aos autos, obsindicante passou a considerar o Sd CARVALHO como sindicado, notificando o mesmo sobre sua nova oitiva, nesta condição, conforme documento de folha 26; <br><br></p>
+<p> Em seu Termo de Inquirição de Sindicado (Fls. 28-29), o Sd CARVALHO repete todas as informações prestadas ao sindicante, quando estava na condição de testemunha, apresentando apenas como fato novo, a informação de que <em>entrou em contato com a Sra. Camila, motorista do veículo, e começou a pagar pelo prejuízo que causou (mencionou ter pago a primeira das 3 parcelas dos gastos com o carro)</em> (<em>litteris</em>); <br><br>
+</p>
+<p>As imagens de vídeo confirmam as informações acima descritas, além de evidenciarem o estado etílico avançado em que se encontrava o Sd CARVALHO, que por diversas vezes caiu em via pública, e em outras tinha dificuldades em se manter em pé. Em um determinado momento aparece uma imagem em que o sindicado após se levantar do chão começa a urinar na calçada e em um muro, nas esquinas entre as ruas Liberdade e Venâncio Aires. Ressalta-se que todas estas situações descritas acima foram observadas por cidadões que passavam pelo local em seus automóveis ou caminhando; <br><br>
+</p>
+<p>Assevera-se ainda, que ao chegar na guarda, o Sd CARVALHO foi desrespeitoso com a Cmt da Gda, que, ao exigir sua documentação, recebeu das mãos do militar um papel higiênico, mostrando mais uma vez total descontrole com sua postura; <br><br></p>
+<p>A postura adotada pelo Sd CARVALHO (antes, durante e após o acidente) evidencia que o sindicado agiu com <strong>imprudência</strong>, pois realizou ações sem as devidas precauções, agindo de forma precipitada, sem considerar os riscos, e também <strong>negligência</strong>, pois ingeriu quantidades exacerbada de bebida alcoólica, conforme próprio relato do mesmo acostado aos autos e não levou em consideração os riscos de atravessar uma avenida movimentada da cidade, fora da faixa de segurança, vindo a colidir com um veículo civil, ocasionando o acidente, transtornos em via pública e acionamento de Órgãos de Segurança para o atendimento da ocorrência; <br><br>
+</p>
+<p>O acidente em si <strong>NÃO</strong> se caracteriza como "acidente em serviço", tendo em vista que o fato não se enquadra em nenhuna das situações previstas nos Art. 1° e 2° do Decreto Nr 57.272, de 16 NOV 1965, além da excludente prevista no Art. 103 da Portaria Nr 461-DGP, de 20 SET 23, conforme se observa: <br><br> <span style="float:right; font-weight: bold;">Decreto Nr 57.272, de 16 NOV 1965: </span></p>
 </div>
+     <p style="float:right; ">
+      <span style="float:right;margin-left: 70px;"> Art 1° Considera-se acidente em serviço, para os efeitos previstos na legislação em vigor relativa às Forças Armadas, aquêle que ocorra com militar da ativa, quando: <br>
+       a) no exercício dos deveres previstos no Art. 25 do Decreto-Lei n° 9.698, de 2 de setembro de 1946 (Estatuto dos Militares); <br>
+       b) no exercício de suas atribuições funcionais, durante o expediente normal, ou, quando determinado por autoridade competente, em sua prorrogação ou antecipação; <br>
+       c) no cumprimento de ordem emanada de autoridade militar competente;
+       <br>
+       d) no decurso de viagens em objeto de serviço, previstas em regulamentos ou autorizados por autoridade militar competente;
+       <br>
+       e) no decurso de viagens impostas por motivo de movimentação efetuada no interêsse do serviço ou a pedido; <br>
+       f) no deslocamento entre a sua residência e a organização em que serve ou o local de trabalho, ou naquele em que sua missão deva ter início ou prosseguimento, e vice-versa. <br>
+       Art 2° Considera-se acidente em serviço para os fins previstos em lei, ainda quando não seja êle a causa única e exclusiva da morte ou incapacidade haja relação de causa e efeito. </span>
+       <br><br>
+       <span style="font-weight: bold; float:right;"> <br>Portaria Nr 461 - DGP, de 20 SET 2023: <br><br></span>
+       <span style="float: right; margin-left: 70px;">Art 103. Documentos Sanitários de Origem são documentos médico-periciais que visam a comprovação de nexo causal entre uma determinada patologia, da qual o militar ou SC do Exército, é portador, e um acidente em serviço ou a própria atividade laboral. [...] <br>
+       III - não serão considerados acidente em serviço se os mesmos forem resultado de crime, transgressão disciplinar, imprudência ou desídia do militar acidentado ou de subordinado seu, com sua aquiescência.</span>
+       <br><br>  </p>
+      <div class="article">
+        <p>
+          <strong>Não foi apurado</strong> indícios de crime militar ou crime comum por parte do sindicado, todavia o caso se acerca de transgressão disciplinar, prescrita no Regulamento Disciplinar do Exército; <br><br>
+        </p>
+        <p>Assim sendo, o fato em si configura <strong>transgressão disciplinar</strong> capitulada nos números 09 (Deixar de cumprir prescrições expressamente estabelecidas no Estatuto dos Militares ou em outras leis e regulamentos, desde que não haja tipificação como crime ou contraversão penal, cuja violação afete os preceitos da hierarquia e disciplina, a ética militar, a honra pessoal, o pundonor militar ou o decoro da classe), número 40 (Portar-se de maneira inconveniente ou sem compostura) e número 83 (Deixar de portar a identidade militar, estando ou não fardado), todos estes disciplinados no Anexo 1 - Relação de Transgressões, do Decreto N° 4.346, de 26 AGO 02, que aprova aprova o Regulamento Disciplinar do Exército - R4.<br><br></p>
+      <p>A Lei n° 6.880, de 9 DEZ 1980, a qual dispõe acerca do Estatuto dos Militares, em sua Seção II, da Ética Militar, traz em seu teor, preceitos básicos, intrínsecos à vida Castrense, os quais devem ser observados por todos os militares, estando na ativa ou não, e em todos os momentos de sua vida, conforme se exolana abaixo:
+        
+        
+      </p>
+      </div>
+      <p><span></span></p>
+      
+    </details>
+  </div>
+
   <script>
     var news1 = document.getElementById('noticias');
     var news2 = false;
@@ -271,7 +476,7 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
     }
     var news3 = document.getElementById('btn-2');
     var news4 = false;
-    
+
     function buttonOne() {
       news4 = !news4;
       news3.style.display = news4 ?
@@ -279,24 +484,33 @@ text-align: justify;font-size:2vh;padding-left: 25px;padding-right: 25px;}
     }
     var news5 = document.getElementById('btn-5');
     var news6 = false;
-    
+
     function buttonTwo() {
       news6 = !news6;
       news5.style.display = news6 ?
-      'block' : 'none';
+        'block' : 'none';
     }
     var temas = document.getElementById('osTemas');
     var temas1 = false;
+
     function themes() {
       temas1 = !temas1;
       temas.style.display = temas1 ?
-      'block' : 'none';
+        'block' : 'none';
+    }
+    var temasss = document.getElementById('themess');
+    var temas44 = false;
+
+    function otema() {
+      temas44 = !temas44;
+      temasss.style.display = temas44 ?
+        'block' : 'none';
     }
   </script>
   <script>
     const root = document.documentElement;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  
+
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', function() {
         if (this.checked) {
