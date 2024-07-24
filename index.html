@@ -145,11 +145,20 @@
   .y {
     color: #0050FF;
   }
-
+.suicide {
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color:#1B1B1B;
+  overflow: auto;
+  height: auto;
+  position: fixed;
+}
   .btn-2,
   .btn-5,
-  .themess,
-  .suicide
+  .themess
    {
     display: none;
     top: 0;
@@ -202,7 +211,9 @@ h4 {
     font-weight: bold;
     /* Faz a letra ficar em negrito */
   }
-
+.fb-div {
+  border:1px solid #757575;
+}
   .osTemas {
     display: none;
     top: 50px;
@@ -271,7 +282,27 @@ h4 {
   margin-top: 10px;
   border-radius: 8px;
 }
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
 
+.action {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #606770;
+    font-size: 14px;
+}
+
+.action-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
 </style>
 
 <body>
@@ -619,25 +650,30 @@ h4 {
 <div class="hacked"><h1>CHOP SUEY</h1></div>
 <button style="margin-left: 20px;" class="btn--1" onclick="meuSuicidio()">VOLTAR</button> <br><br>
  <audio controls> <source src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/System Of A Down - Chop Suey!  Official HD Video .mp3"></audio> <br><br>
+ <div class="fb-div"></div>
+ <br>
         <div class="post-header">
             <img src="https://raw.githubusercontent.com/3asyice/CelSoares-----/main/1721766967723.jpg" alt="Profile Image" class="profile-img">
             <div class="post-info">
                 <h4>Carvalho</h4>
-                <p>12 jul • <img style="width:15px;height:15px;background:#949494;border-radius:50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6LqufrI5eYdj6FQwuhp1MLFa0ZqE0fdRKhg&usqp=CAU" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDAwyQjzY0GFIArzq1qiu_f4ygg9VID3XMDA&usqp=CAU"></p>
+                <p>12 jul • <img style="width:15px;height:15px;" src="https://cdn.icon-icons.com/icons2/632/PNG/512/globe_icon-icons.com_58031.png" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDAwyQjzY0GFIArzq1qiu_f4ygg9VID3XMDA&usqp=CAU"></p>
             </div>
         </div>
         <div class="post-content">
-            <p style="font-family;sans :font-language-override: ">Os senhores precisam saber de minha atual insanidade mental, a qual me deixou louco por um longo tempo, fui um péssimo soldado, mas porque tentei suicídio ao me jogar na frente de um carro quando bebi demais, mas sou um sobrevivente do meu próprio perigo, lembro de ficar em um estado de embriaguez avançadíssimo onde fiz coisas inconscientemente sem o meu verdadeiro controle. Mas sem drama, ok? Foi divertido demais e faria tudo novamente. Não tenho controle de mim mesmo, pois o meu cérebro é quem está no controle de todos os meus movimentos e pensamentos, talvez, de qualquer forma, sabia exatamente o que estava fazendo. Sem arrependimentos. O que me fez ser expulso do Exército Brasileiro foi esse meu mau comportamento doentio que assustou todos que estavam tentando ajudar, mas sou teimoso, tento resolver todos os meus malditos problemas de um jeito aleatório. Tanto faz o que acontecer acontece. O que importa realmente é como se enfrenta uma situação difícil. O coronel Soares foi um tremendo babaca em expulsar o melhor dos soldados. Que fique para a história a sua maior injustiça desse ano. <br><br>Sobre o Exército Brasileiro: É uma instituição doente, com jogo de poderes muito grande, composta de pessoas que se superestimam por terem postos superiores, muitas vezes, diminuindo, perseguindo, fazendo pouco caso, humilhando e coagindo aqueles que estão em posto inferior. Eu já vi muitos companheiros meus de trabalho cair, chorarem em alojamentos, serem perseguidos, se suicidarem; e eu não quero que isso aconteça comigo nem com mais ninguém.</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbj_hCQE3cdQE9nQ0BOwys3WMY1HGg06hko4jFI-AjxaHVW7pSrDVo8o&s=10" alt="you just have to do it!" class="post-img">
+            <p style="font-family;sans :font-language-override: ">Os senhores precisam saber de minha atual insanidade mental, a qual me deixou louco por um longo tempo, fui um péssimo soldado, mas porque tentei suicídio ao me jogar na frente de um carro quando bebi demais, portanto sou um sobrevivente do meu próprio perigo. Lembro de ficar em um estado de embriaguez avançadíssimo onde fiz coisas inconscientemente, sem o meu verdadeiro controle. Mas não vamos fazer drama, tá bom? Foi divertido demais e faria tudo novamente. Não tenho controle de mim mesmo, pois o meu cérebro é quem está no controle de todos os meus movimentos e pensamentos, talvez, de qualquer forma, sabia exatamente o que estava fazendo. Sem arrependimentos. O que me fez ser expulso do Exército Brasileiro foi esse meu mau comportamento doentio que assustou todos que estavam tentando ajudar, mas sou teimoso, tento resolver todos os meus malditos problemas de um jeito aleatório. Tanto faz o que acontecer acontece. O que importa realmente é como se enfrenta uma situação difícil. O coronel Soares foi um tremendo injusto em expulsar um soldado que estava se esforçando para melhorar. Que fique para a história a sua injustiça de 2024. <br><br>Sobre o Exército Brasileiro: É uma instituição doente, com jogo de poderes muito grande, composta de pessoas que se superestimam por terem postos superiores, muitas vezes, diminuindo, perseguindo, fazendo pouco caso, humilhando e coagindo aqueles que estão em posto inferior. Eu já vi muitos companheiros meus de trabalho cair, chorarem em alojamentos, serem perseguidos, se suicidarem; e eu não quero que isso aconteça comigo nem com mais ninguém.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbj_hCQE3cdQE9nQ0BOwys3WMY1HGg06hko4jFI-AjxaHVW7pSrDVo8o&s=10" alt="you just have to do it!" class="post-img"> 
+            <div class="post-actions">
+            <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Facebook_Like_button.svg/1024px-Facebook_Like_button.svg.png" alt="Like Icon" class="action-icon">Curtir</div>
+            <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img  src="https://cdn.icon-icons.com/icons2/2806/PNG/512/comment_chat_message_icon_178897.png" alt="Comment Icon" class="action-icon">Comentar</div>
+            <div id="shareBtn" style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/1155/PNG/512/1486564727-share_81543.png" alt="Share Icon" class="action-icon">Compartilhar</div> 
+        </div>
+          <div class="fb-div"></div> <br>
         </div>
     </div>
-<div class="article">
-  
-  </div>
 
-    
-  </div>
+  </div><br>
 
+  <br><br>
   <script>
     var news1 = document.getElementById('noticias');
     var news2 = false;
@@ -706,6 +742,23 @@ h4 {
         }
       });
     });
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Notícia de Um Ex Soldado do Exército Brasileiro',
+                text: 'Soldado expulso conta relatos em site da Internet',
+                url: window.location.href,
+            });
+            console.log('Post compartilhado com sucesso');
+        } catch (error) {
+            console.error('Erro ao compartilhar:', error);
+        }
+    } else {
+        alert('Compartilhamento não suportado neste navegador.');
+    }
+});
+
   </script>
 </body>
 
