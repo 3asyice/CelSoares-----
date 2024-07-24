@@ -817,6 +817,90 @@ document.getElementById('commentForm').addEventListener('submit', function(event
     }
 });
   </script>
+  <script>
+    
+    // server.js
+const express = require('express');
+const http = require('http');
+const socketIo = require('socket.io');
+const mongoose = require('mongoose');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+// Conectar ao MongoDB
+mongoose.connect('mongodb://localhost:27017/comments', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const commentSchema = new mongoose.Schema({
+  text: String,
+  timestamp: { type: Date, default: Date.now },
+});
+
+const Comment = mongoose.model('Comment', commentSchema);
+
+io.on('connection', (socket) => {
+  console.log('Novo cliente conectado');
+
+  // Enviar comentários antigos ao novo cliente
+  Comment.find().then((comments) => {
+    socket.emit('previousComments', comments);
+  });
+
+  // Receber novo comentário
+  socket.on('newComment', (commentText) => {
+    const newComment = new Comment({ text: commentText });
+    newComment.save().then((comment) => {
+      io.emit('newComment', comment);
+    });
+  });
+
+  socket.on('disconnect', () => {
+    console.log('Cliente desconectado');
+  });
+});
+
+app.use(express.static('public'));
+
+const PORT = 3000;
+server.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+
+    // public/script.js
+const socket = io();
+
+// Carregar comentários anteriores
+socket.on('previousComments', (comments) => {
+    comments.forEach((comment) => {
+        addComment(comment);
+    });
+});
+
+// Adicionar novo comentário em tempo real
+socket.on('newComment', (comment) => {
+    addComment(comment);
+});
+
+document.getElementById('commentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const commentInput = document.getElementById('commentInput');
+    const commentText = commentInput.value.trim();
+    if (commentText !== "") {
+        socket.emit('newComment', commentText);
+        commentInput.value = "";
+    }
+});
+
+function addComment(comment) {
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment');
+    commentDiv.textContent = comment.text;
+    document.getElementById('comments').appendChild(commentDiv);
+}
+
+  </script>
 </body>
 
 </html>
