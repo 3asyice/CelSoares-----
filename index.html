@@ -40,6 +40,7 @@
   }
 
   .noticias {
+    margin:0;
     display: none;
     top: 0;
     right: 0;
@@ -344,6 +345,15 @@ h4 {
 .comment:last-child {
   border-bottom: none;
 }
+.comment-section {
+            width: 50%;
+            margin: auto;
+        }
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px 0;
+        }
 </style>
 
 <body>
@@ -709,15 +719,13 @@ h4 {
             <div id="shareBtn" style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/1155/PNG/512/1486564727-share_81543.png" alt="Share Icon" class="action-icon">Compartilhar</div> 
         </div>
           <div class="fb-div"></div> <br>
-        <div class="comment-section">
-          <form id="commentForm">
-            <input type="text" id="commentInput" placeholder="Escreva um comentário...">
-            <button type="submit">Postar</button>
-          </form>
-          <div id="comments"></div>
-        </div> </div>
-       
-        <div>
+   <div class="comment-section">
+     <h2>Comentários</h2>
+     <div id="comments"></div>
+     <textarea id="commentInput" rows="4" cols="50" placeholder="Escreva seu comentário..."></textarea><br>
+     <button onclick="addComment()">Post Comment</button>
+   </div>
+
           <div class="fb-div"></div><br>
            <div class="post-header">
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsVMzQHlQUXlv2_aOooeisW78wrSnSLdujQ&s" alt="Profile Image" class="profile-img">
@@ -838,18 +846,6 @@ h4 {
         alert('Compartilhamento não suportado neste navegador.');
     }
 });
-document.getElementById('commentForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const commentInput = document.getElementById('commentInput');
-    const commentText = commentInput.value.trim();
-    if (commentText !== "") {
-        const commentDiv = document.createElement('div');
-        commentDiv.classList.add('comment');
-        commentDiv.textContent = commentText;
-        document.getElementById('comments').appendChild(commentDiv);
-        commentInput.value = "";
-    }
-});
 
 document.getElementById('shareBtn').addEventListener('click', async () => {
     if (navigator.share) {
@@ -870,87 +866,31 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
   </script>
   <script>
     
-    // server.js
-const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
-const mongoose = require('mongoose');
-
-const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
-
-// Conectar ao MongoDB
-mongoose.connect('mongodb://localhost:27017/comments', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadComments();
 });
 
-const commentSchema = new mongoose.Schema({
-  text: String,
-  timestamp: { type: Date, default: Date.now },
-});
-
-const Comment = mongoose.model('Comment', commentSchema);
-
-io.on('connection', (socket) => {
-  console.log('Novo cliente conectado');
-
-  // Enviar comentários antigos ao novo cliente
-  Comment.find().then((comments) => {
-    socket.emit('previousComments', comments);
-  });
-
-  // Receber novo comentário
-  socket.on('newComment', (commentText) => {
-    const newComment = new Comment({ text: commentText });
-    newComment.save().then((comment) => {
-      io.emit('newComment', comment);
-    });
-  });
-
-  socket.on('disconnect', () => {
-    console.log('Cliente desconectado');
-  });
-});
-
-app.use(express.static('public'));
-
-const PORT = 3000;
-server.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
-
-    // public/script.js
-const socket = io();
-
-// Carregar comentários anteriores
-socket.on('previousComments', (comments) => {
-    comments.forEach((comment) => {
-        addComment(comment);
-    });
-});
-
-// Adicionar novo comentário em tempo real
-socket.on('newComment', (comment) => {
-    addComment(comment);
-});
-
-document.getElementById('commentForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const commentInput = document.getElementById('commentInput');
-    const commentText = commentInput.value.trim();
-    if (commentText !== "") {
-        socket.emit('newComment', commentText);
-        commentInput.value = "";
-        localStorage.setItem(" ");
-localStorage.getItem(" ");
+function addComment() {
+    const commentInput = document.getElementById('commentInput').value;
+    if (commentInput) {
+        let comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push(commentInput);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        document.getElementById('commentInput').value = '';
+        loadComments();
     }
-});
+}
 
-function addComment(comment) {
-    const commentDiv = document.createElement('div');
-    commentDiv.classList.add('comment');
-    commentDiv.textContent = comment.text;
-    document.getElementById('comments').appendChild(commentDiv);
+function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+    const commentsContainer = document.getElementById('comments');
+    commentsContainer.innerHTML = '';
+    comments.forEach((comment, index) => {
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        commentElement.innerText = comment;
+        commentsContainer.appendChild(commentElement);
+    });
 }
 
   </script>
