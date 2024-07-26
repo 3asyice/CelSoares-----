@@ -152,6 +152,7 @@
   right: 0;
   left: 0;
   bottom: 0;
+  margin:0;
   background-color:#1B1B1B;
   overflow: auto;
   height: auto;
@@ -730,11 +731,12 @@ h4 {
           aspect-ratio: 16/9;
           margin:0;" src="https://www.youtube.com/embed/EvuRPLKc1JQ" frameborder="0"></iframe>
         </div>
-         <div class="post-actions">
-           <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Facebook_Like_button.svg/1024px-Facebook_Like_button.svg.png" alt="Like Icon" class="action-icon">Curtir</div>
-           <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/2806/PNG/512/comment_chat_message_icon_178897.png" alt="Comment Icon" class="action-icon">Comentar</div>
-           <div id="shareBtn" style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/1155/PNG/512/1486564727-share_81543.png" alt="Share Icon" class="action-icon">Compartilhar</div><div class="fb-div"></div> <br>
-           </div>
+          <div class="post-actions">
+              <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Facebook_Like_button.svg/1024px-Facebook_Like_button.svg.png" alt="Like Icon" class="action-icon">Curtir</div>
+              <div style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/2806/PNG/512/comment_chat_message_icon_178897.png" alt="Comment Icon" class="action-icon">Comentar</div>
+              <div id="shareBtn" style="background-color: #36373D;border-radius:15px;padding:5px;margin-bottom:5px;" class="action"><img src="https://cdn.icon-icons.com/icons2/1155/PNG/512/1486564727-share_81543.png" alt="Share Icon" class="action-icon">Compartilhar</div>
+            </div>
+           <div class="fb-div"></div>
            <div class="comment-section">
              <form id="commentForm">
                <input type="text" id="commentInput" placeholder="Escreva um comentário...">
@@ -848,6 +850,23 @@ document.getElementById('commentForm').addEventListener('submit', function(event
         commentInput.value = "";
     }
 });
+
+document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Notícia de Um Ex Soldado do Exército Brasileiro',
+                text: 'Soldado expulso conta relatos em site da Internet',
+                url: window.location.href,
+            });
+            console.log('Post compartilhado com sucesso');
+        } catch (error) {
+            console.error('Erro ao compartilhar:', error);
+        }
+    } else {
+        alert('Compartilhamento não suportado neste navegador.');
+    }
+});
   </script>
   <script>
     
@@ -931,7 +950,8 @@ function addComment(comment) {
     commentDiv.textContent = comment.text;
     document.getElementById('comments').appendChild(commentDiv);
 }
-
+localStorage.setItem(" ");
+localStorage.getItem(" ");
   </script>
 </body>
 
