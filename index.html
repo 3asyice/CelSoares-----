@@ -941,6 +941,8 @@ document.getElementById('commentForm').addEventListener('submit', function(event
     if (commentText !== "") {
         socket.emit('newComment', commentText);
         commentInput.value = "";
+        localStorage.setItem(" ");
+localStorage.getItem(" ");
     }
 });
 
@@ -950,8 +952,7 @@ function addComment(comment) {
     commentDiv.textContent = comment.text;
     document.getElementById('comments').appendChild(commentDiv);
 }
-localStorage.setItem(" ");
-localStorage.getItem(" ");
+
   </script>
 </body>
 
