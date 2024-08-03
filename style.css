@@ -1,175 +1,156 @@
-html,
-  body {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 1px;
+    font-weight: normal;
     font-size: 14px;
-        color: #ffffff;
+    color: #ffffff;
     background: var(--bg-color);
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    min-width: 320px;
-    max-width: 1440px;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
     line-height: 1.6;
-    margin: 0 auto;
-    padding: 0;
+}
 
-
-
-  }
-
-  :root {
+:root {
     --bg-color: #000107;
-  }
+}
 
-  .noticias {
-    margin:0 auto;
+.noticias {
+    margin: 0;
     display: none;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    width: 100%;
     background: var(--bg-color);
     overflow: auto;
     height: auto;
     position: fixed;
-  }
+}
 
-  h1 {
+h1 {
     text-align: center;
     color: #ffffff;
     font-size: 4vh;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
     letter-spacing: 5px;
-  }
+}
 
-  .btn--1 {
+.btn--1 {
     color: #000EA6;
     padding: 7px;
     background-color: #EEEEEE;
     border: none;
     border-radius: 7px;
-    font-weight: bolder;
-
     font-weight: 500;
-    font-size: 2em;
+    font-size: 2vh;
     margin-top: 20px;
     font-family: 'Libre Baskerville', 'Georgia', serif;
     text-align: center;
-    font-size: 2vh;
     padding-left: 25px;
     padding-right: 25px;
-  }
+}
 
-  strong {
+.btn--1:hover {
     color: #FF0000;
-  }
-
-  .btn--1:hover {
-    color: #FF0000;
-    padding: 7px;
     background-color: #2C6FFF;
     border: none;
     border-radius: 7px;
-    font-weight: bolder;
-
     font-weight: 500;
-    font-size: 2em;
+    font-size: 2vh;
     margin-top: 20px;
     font-family: 'Libre Baskerville', 'Georgia', serif;
     text-align: center;
-    font-size: 2vh;
     padding-left: 25px;
     padding-right: 25px;
-  }
-* {
-  /* This code will just make the selection not be possible in the damn whole site */
-  -webkit-user-select: none;  
-            -moz-user-select: none;
-            -ms-user-select: none;      
-  user-select: none;
-  
 }
-footer {
-  background-color: rgba(125, 35, 35, 1);
-  color:rgba(238, 255, 121, 1);
-  padding:30px;
-  display :flex-wrap;
 
-  
+* {
+    -webkit-user-select: none;  
+    -moz-user-select: none;
+    -ms-user-select: none;      
+    user-select: none;
 }
-  .container {
+
+footer {
+    background-color: rgba(125, 35, 35, 1);
+    color: rgba(238, 255, 121, 1);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap; /* 'flex-wrap' deve ser 'wrap' para funcionar */
+}
+
+.container {
     height: 100vh;
     display: grid;
-    margin:0;
+    margin: 0;
     grid-template-rows: 30px 100px 25px;
-  }
+}
 
-  p {
-        color: #ffffff;
-    font-weight: 1px;
-    font-size: 14px;
+p {
+    color: #ffffff;
+    font-size: 2vh;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    font-size: 2vh;
     padding-left: 25px;
     padding-right: 25px;
-  }
+}
 
-  .element {
+.element {
     background: #7F7F7F;
     color: #E5FF00;
     font-family: 'Times New Roman', Times, serif;
-    margin:0;
+    margin: 0;
     text-align: center;
     justify-items: center;
-
-  }
-em {
-  color:rgba(240, 255, 0, 1);
 }
-  .elementt {
+
+em {
+    color: rgba(240, 255, 0, 1);
+}
+
+.elementt {
     background: #FF0000;
     color: #E5FF00;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     justify-items: center;
-  }
+}
 
-  .element-1 {
+.element-1 {
     background: var(--bg-color);
     color: #E5FF00;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     justify-items: center;
-  }
+}
 
-  .y {
+.y {
     color: #0050FF;
-  }
+}
+
 .suicide {
-  display: none;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin:0 auto;
-  background-color:#1B1B1B;
-  overflow: auto;
-  height: auto;
-  background: url("https://www.icegif.com/wp-content/uploads/2022/09/icegif-1618.gif");
-  background-size: cover;
-  position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: #1B1B1B;
+    overflow: auto;
+    height: auto;
+    background: url("https://www.icegif.com/wp-content/uploads/2022/09/icegif-1618.gif");
+    background-size: cover;
+    position: fixed;
 }
+
 a {
-  color:#0090FF;
+    color: #0090FF;
 }
-  .btn-2,
-  .btn-5,
-  .themess
-   {
+
+.btn-2, .btn-5, .themess {
     display: none;
     top: 0;
     right: 0;
@@ -179,87 +160,75 @@ a {
     overflow: auto;
     height: auto;
     position: fixed;
-    margin:0 auto;
-  }
-h4 {
-  color:#FFFFFF;
+    margin: 0 auto;
 }
-  h3 {
+
+h4, h3 {
     color: #FFFFFF;
+}
+
+h3 {
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 2vh; /* Ajuste a unidade de acordo com o contexto */
     border: 1px solid dimgray;
     font-family: 'Times New Roman', Times, serif;
-
-    color: #FFFFFF;
     font-weight: 500;
-    font-size: 2em;
-    margin-top: 20px;
-    font-family: 'Libre Baskerville', 'Georgia', serif;
-    text-align: center;
-    font-size: 2vh;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  input,
-  label {
-    color: white;
-  }
-
-  .article p::first-letter {
-    font-size: 3em;
-    /* Aumenta o tamanho da primeira letra */
-    float: left;
-    /* Faz com que a letra fique ao lado do texto */
-    margin-right: 0.1em;
-    /* Espaço entre a letra e o resto do texto */
-    line-height: 1;
-    /* Ajusta o alinhamento vertical */
-    font-weight: bold;
-    /* Faz a letra ficar em negrito */
-  }
-.fb-div {
-  border:1px solid #757575;
 }
-  .osTemas {
+
+input, label {
+    color: white;
+}
+
+.article p::first-letter {
+    font-size: 3em;
+    float: left;
+    margin-right: 0.1em;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.fb-div {
+    border: 1px solid #757575;
+}
+
+.osTemas {
     display: none;
     top: 50px;
     right: 0;
     left: 50%;
-    margin:0 auto;
+    margin: 0 auto;
     bottom: 490px;
     background: var(--bg-color);
     overflow: auto;
     height: auto;
     position: fixed;
     border: 2px solid navajowhite;
-  }
-span {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-      line-height: 1;
-     font-weight: bold;
 }
-  .article {
+
+span {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-  }
-.hacked {
-  background: url('https://istamarahome.net/wp-content/uploads/elementor/thumbs/smiley-1-q93izfepj0n44gvgxdvzaidc2hvojnpez3rtnc4fls.png') ;
-  background-repeat: no-repeat;
-  background-position: absolute;
-  background-size: cover;
-  margin:0;
-  padding:100px;
-  margin:;
+    line-height: 1;
+    font-weight: bold;
+}
 
-  
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hacked {
+    background: url('https://istamarahome.net/wp-content/uploads/elementor/thumbs/smiley-1-q93izfepj0n44gvgxdvzaidc2hvojnpez3rtnc4fls.png');
+    background-repeat: no-repeat;
+    background-position: center; /* Ajusta a posição do fundo */
+    background-size: cover;
+    margin: 0;
+    padding: 100px;
 }
 
 .post {
@@ -278,12 +247,12 @@ span {
 }
 
 .profile-img {
-   border:2px solid #8F8F8F;
+    border: 2px solid #8F8F8F;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-    margin-left:18px;
+    margin-left: 18px;
 }
 
 .post-info h4 {
@@ -300,14 +269,16 @@ span {
 .post-content p {
     margin: 0;
     font-size: 14px;
-        color: #ffffff;
+    color: #ffffff;
 }
+
 .post-img {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
 }
+
 .post-actions {
     display: flex;
     justify-content: space-around;
@@ -331,48 +302,42 @@ span {
 }
 
 .comment-section {
-  margin-top: 15px;
+    width: 50%;
+    margin: auto;
 }
+
 #commentForm {
-  display: flex;
-  margin-bottom: 10px;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 #commentInput {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color:black;
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: black;
 }
 
 #commentForm button {
-  padding: 8px 12px;
-  background-color: #4267B2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    padding: 8px 12px;
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #comments {
-  max-height: 200px;
-  overflow-y: auto;
+    max-height: 200px;
+    overflow-y: auto;
 }
+
 .comment {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
 .comment:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
-.comment-section {
-            width: 50%;
-            margin: auto;
-        }
-        .comment {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 5px 0;
-    }
