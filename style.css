@@ -77,8 +77,8 @@ footer {
     background-color: rgba(125, 35, 35, 1);
     color: rgba(238, 255, 121, 1);
     padding: 30px;
-    display: flex;
-    flex-wrap: wrap; /* 'flex-wrap' deve ser 'wrap' para funcionar */
+    display: block;
+    flex-wrap: wrap;
 }
 
 .container {
