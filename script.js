@@ -124,3 +124,20 @@ function loadComments() {
         commentsContainer.appendChild(commentElement);
     });
 }
+let index = 0;
+const images = document.querySelectorAll('.carousel-images img');
+const totalImages = images.length;
+
+document.querySelector('.next').addEventListener('click', () => {
+  index = (index + 1) % totalImages;
+  updateCarousel();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  index = (index - 1 + totalImages) % totalImages;
+  updateCarousel();
+});
+
+function updateCarousel() {
+  document.querySelector('.carousel-images').style.transform = `translateX(-${index * 100}%)`;
+}
